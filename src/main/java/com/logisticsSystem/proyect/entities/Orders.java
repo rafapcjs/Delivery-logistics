@@ -21,8 +21,7 @@ public class Orders {
     private Long id;
     @Column(name = "cost", nullable = false)
     private Long cost;
-    @Column(name = "delivery", nullable = false)
-    private String delivery;
+
     @Column(name = "product_name", nullable = false)
 
     private String productName;

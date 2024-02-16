@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 public class StatesDto {
 
-    private Long id;
+
 
     private String state;
 

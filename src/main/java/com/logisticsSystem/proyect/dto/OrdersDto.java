@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class OrdersDto {
 
-    private Long id;
+
 
     private Long cost;
 

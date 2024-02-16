@@ -29,8 +29,10 @@ public class DeliveryMan {
     private String email;
     @Column(name = "passworrd", nullable = false)
     private String password;
-    @OneToMany(mappedBy = "deliveryMan", fetch = FetchType.LAZY, orphanRemoval = true, targetEntity = Customers.class, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "deliveryMan", fetch = FetchType.LAZY, orphanRemoval = true, targetEntity = Orders.class, cascade = CascadeType.ALL)
    @JsonIgnore
     private List<Orders> ordesList;
+
+
 
 }
