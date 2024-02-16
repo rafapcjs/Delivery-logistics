@@ -27,7 +27,7 @@ public class UpdateCustomerController {
             customers.setIdentification(customersDto.getIdentification());
             return  new ResponseEntity<>(customers, HttpStatus.CREATED);
         }
-        return ResponseEntity.status(HttpStatus.OK).body("Resourse no found ".concat("the id is"+"  "+id));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Resourse no found ".concat("the id is"+"  "+id));
     }
 
 

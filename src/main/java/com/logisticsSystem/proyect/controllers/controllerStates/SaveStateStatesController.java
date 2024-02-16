@@ -3,6 +3,7 @@ package com.logisticsSystem.proyect.controllers.controllerStates;
 import com.logisticsSystem.proyect.dto.StatesDto;
 import com.logisticsSystem.proyect.entities.States;
 import com.logisticsSystem.proyect.services.servicesOrders.ImplServicesOrders;
+import com.logisticsSystem.proyect.services.servicesStates.ImplServicesStates;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +20,7 @@ public class SaveStateStatesController {
 
     @Autowired
 
-    private ImplServicesOrders implServicesOrders;
+    private ImplServicesStates implServicesStates;
 
     @PostMapping(value = "/save")
 
@@ -30,6 +31,7 @@ public class SaveStateStatesController {
                 .ordersList(statesDto.getOrdersList())
                 .state(statesDto.getState())
                 .build();
+        implServicesStates.save(states);
         return ResponseEntity.created(new URI("/api/v1/states/save")).build();
     }
 }
